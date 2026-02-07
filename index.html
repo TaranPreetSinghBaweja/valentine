@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposed Her</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="floating-emojis"></div>
+  <div class="container">
+    <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
+      data-width="100%">
+      <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
+      <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+    </div>
+    
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <h1>Will you be my Valentine? 💖🌹🥰</h1>
+    <!-- <p>nvn is all yours</p> -->
+
+    <div class="btn">
+      <a href="yes.html">Yes</a>
+      <a href="no1.html">No</a>
+    </div>
+  </div>
+  <script>
+    const emojis = ['❤️', '💕', '💖', '💗', '💓', '💝', '💘', '💞'];
+    const container = document.querySelector('.floating-emojis');
+    for(let i = 0; i < 15; i++) {
+      const emoji = document.createElement('div');
+      emoji.className = 'emoji';
+      emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.left = Math.random() * 100 + '%';
+      emoji.style.animationDelay = Math.random() * 5 + 's';
+      emoji.style.animationDuration = (Math.random() * 3 + 5) + 's';
+      container.appendChild(emoji);
+    }
+  </script>
+</body>
+
+</html>
