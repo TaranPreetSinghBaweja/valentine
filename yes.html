@@ -8,6 +8,7 @@
   <title>Ask Her Out</title>
 
   <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -30,6 +31,24 @@
 </h1>
   </div>
   <script>
+    // EmailJS initialization
+    emailjs.init('BYqKtOE8X0-uCyZ3b');
+    
+    // Send notification
+    emailjs.send('service_afwle6n', 'template_pelum9a', {
+      to_email: 'taranpreetsinghbaweja2001@gmail.com',
+      to_name: 'Naveen',
+      message: '🎉 She said YES! Komal accepted to be your Valentine! 💖',
+      timestamp: new Date().toLocaleString()
+    })
+    .then(response => {
+      console.log('Email sent successfully!', response);
+    })
+    .catch(err => {
+      console.error('Email error:', err);
+    });
+    
+    // Floating emojis
     const emojis = ['❤️', '💕', '💖', '💗', '💓', '💝', '💘', '💞'];
     const container = document.querySelector('.floating-emojis');
     for(let i = 0; i < 15; i++) {
